@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="杂谈," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="2018-01-27连续下雪，简直不要太美了。不想错误如此美景，所以决定在窗旁键盘前，摆好姿势，好好装个B，尼玛！冷得一匹。先预热一哈。。。。。。。。好了，开始闲聊~下午何时忘记了，终于撸完了简易的图片加载工具类(内存缓存、磁盘缓存、网络加载分阶段开发及讲述)，对没错Demo级别的，再看看自己半年前撸的那个，感觉硬生生是搬运出来的，又想起老师告诫：视频无用（有些时候视频还是能有启蒙作用，就这个问题">
+<meta name="keywords" content="杂谈">
+<meta property="og:type" content="article">
+<meta property="og:title" content="站点介绍">
+<meta property="og:url" content="http://yoursite.com/2018/01/27/站点介绍/index.html">
+<meta property="og:site_name" content="Joetube">
+<meta property="og:description" content="2018-01-27连续下雪，简直不要太美了。不想错误如此美景，所以决定在窗旁键盘前，摆好姿势，好好装个B，尼玛！冷得一匹。先预热一哈。。。。。。。。好了，开始闲聊~下午何时忘记了，终于撸完了简易的图片加载工具类(内存缓存、磁盘缓存、网络加载分阶段开发及讲述)，对没错Demo级别的，再看看自己半年前撸的那个，感觉硬生生是搬运出来的，又想起老师告诫：视频无用（有些时候视频还是能有启蒙作用，就这个问题">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/pic/00002.jpg">
+<meta property="og:image" content="http://yoursite.com/pic/00001.jpg">
+<meta property="og:image" content="http://yoursite.com/pic/00003.jpg">
+<meta property="og:image" content="http://yoursite.com/pic/00004.jpg">
+<meta property="og:updated_time" content="2018-03-01T09:11:21.105Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="站点介绍">
+<meta name="twitter:description" content="2018-01-27连续下雪，简直不要太美了。不想错误如此美景，所以决定在窗旁键盘前，摆好姿势，好好装个B，尼玛！冷得一匹。先预热一哈。。。。。。。。好了，开始闲聊~下午何时忘记了，终于撸完了简易的图片加载工具类(内存缓存、磁盘缓存、网络加载分阶段开发及讲述)，对没错Demo级别的，再看看自己半年前撸的那个，感觉硬生生是搬运出来的，又想起老师告诫：视频无用（有些时候视频还是能有启蒙作用，就这个问题">
+<meta name="twitter:image" content="http://yoursite.com/pic/00002.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/01/27/站点介绍/"/>
+
+
+
+
+
+  <title>站点介绍 | Joetube</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Joetube</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">业精于勤荒于嬉</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/27/站点介绍/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Joe Wang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/joe.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joetube">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">站点介绍</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-27T16:10:29+08:00">
+                2018-01-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="2018-01-27"><a href="#2018-01-27" class="headerlink" title="2018-01-27"></a>2018-01-27</h2><p>连续下雪，简直不要太美了。不想错误如此美景，所以决定在窗旁键盘前，摆好姿势，好好装个B，尼玛！冷得一匹。</p><p><br><img src="/pic/00002.jpg"><br></p><p>先预热一哈。。。。。。。。好了，开始闲聊~</p><br><img src="/pic/00001.jpg"><br><p>下午何时忘记了，终于撸完了简易的图片加载工具类(内存缓存、磁盘缓存、网络加载分阶段开发及讲述)，对没错Demo级别的，再看看自己半年前撸的那个，感觉硬生生是搬运出来的，又想起老师告诫：视频无用（有些时候视频还是能有启蒙作用，就这个问题我们还互怼过），感慨万千，后不自觉在github上关注到了一位学弟（别误会），吃了一惊，WKF！后生可畏~，长江后浪推前浪啊！</p><br><img src="/pic/00003.jpg"><br><p>然后在学弟的启发下（虽然内容有限，但是整理地很得当，为我省去了很多时间），建立了这一个站点， 站点的内容也主要是记录学习历程，历程就以这个工具类开始。</p><br><p>两年半前第一次对博客有个概念，两年前第一次用服务器搭建自己的wordpress，然后由于太过单纯，数据库既然被人留下了QQ号。后来又买了域名准备重新开始，并且做好备份。谁知。。。。，最终备案不通，线程阻塞，不了了之，只得将笔记写再OneNote上，也在其他的平台上画过一些把戏。</p><br><img src="/pic/00004.jpg"><br><br><br>## 2018-01-29<br><br>&emsp;&emsp;前几日在讨论交流的时候，看到一篇文章，具体内容是：一个“样样学会”的10年老码农，面临失业（市场能给的价格和自己期望的相差太远）。我对这篇文章的印象不是很深，但是讨论的时候一句话戳中了我。“有的人是10年经验，而有的人是10 x 1年”，再想想周围的人和事（当然，每个人的追求不同，所以我这里无任何批评之意），又何尝不是这样，十年经验不知进取，有问题不探索，知其然不知所以然。同一个问题遇到一遍搜索一遍，拷贝一遍，重复几次十几次几十次，看则十年经验，实则不到1-2年。游戏、新闻、短视频、武侠小说等等，十年浮躁。<br>&emsp;&emsp;正如胡适的“你的空闲时间，决定了你的人生高度”，我并非批评这些娱乐方式，只是娱乐需要有限度，时间不应该被浪费，“有的人25岁就死了 只是到75岁才埋葬 我们究竟是活了365天 还是活了1天 重复了364遍 ​​​​”。<br><br>&emsp;&emsp;献给明天的自己<br><br>## 2018-01-30<br><br><p class="text_indent_2">今天在啃《Android开发艺术探索》，妈耶！关于有些知识，我还以为我一直的想法是对的，结果特么原来的固有思维导致我在阅读的时候越读越难懂，后来摒弃已有的知识重新整理，感觉自己已是漏洞百出。还有现在感觉看源码的正确知识应该是：关键函数、函数及变量命名、注释，而是不是一味地函数跟踪（大佬可能有更多的建议，等我慢慢积累了再添加吧）。<br><br>## 2018-01-31<br></p><p class="text_indent_2">今天心情有点不太好，跑了1.5KM。然后心情就好了。。。<br><br>## 2018-02-10<br></p><p class="text_indent_2">和盼姐聊了一席话，感觉需要努力的地方实在时太多。故而计划在过年的这几天每天花3小时和盼姐学习英语。<br><br>## 2018-02-11<br><br></p><p class="text_indent_2">My dreaming-girl lied me that she would get married, I want to ignore it for not being hurted, but I don’t think I owe somebody nothing, so I replied this girl without take care of her purpose.<br><br></p><p class="text_indent_2">My sister pan told me that I had msut hurted someone deeply, and I am a bed gay, but the distance between us makes loving becoming fade. Sister pan asked me if there any prossible for me to decide to give my hands to this girl, I replied that if she come to ShangHai, I would, no ~ , I must give her my hands. I alse asked myself why i  can’t go to her city .<br></p><p class="text_indent_2">Doing something for not being regret.<br><br>## 2018-03-01<br><br>春节，一直在和盼姐练习口语，虽然只有10来天，但是还是觉得受益匪浅。毕竟能做到跟人说英语不脸红了（虽然很蹩脚）。<br><br>2月份在家里的阅读量有所下降，可能是由于春节的原因，但基本还是做到了一月至少一本非专业书籍。为了毕设也看了一点Tensorflow，只是皮毛中的皮毛。至于android貌似近乎停滞，心中有愧。<br><br>在这一个半年里敲过了《第一行代码》、看完了《群英传》，然而关于《Android开发艺术探索》的咀嚼近日陷入了迷茫，看得似懂非懂，感觉实际的时候用到得并不多，看完了也不太熟，有些怀疑自己“假大空”，有问题还是要搜索，所以不敢再往下看了。幸得前辈指导，是自己性子没沉下来，眼高手低又急于求切了，所以现在要做得就是把这本书先嚼完，然后对照《群英传》与网络上得素材反复实践练习，对照《开发艺术探索》理解，循序渐进，做到“知其然，知其所以然”。<br><br>所以关于《Android 源码设计模式解析与实战》暂时搁置。<br><br>3月份目前的安排是完成毕设初稿，先稳定好整体节奏，然后将二月份遗留得《白说》阅读完毕，购买《偶遇》并在不影响论文进度得条件下，尽量阅读完毕（每天抽），关于Android得练习，暂时将上午得闲暇时间联系并阅读Android Training。<br><br>微笑着待人，微笑着生活<br><br></p><p>未完待续…</p>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/杂谈/" rel="tag"># 杂谈</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/01/27/掘金好文章-Android/" rel="prev" title="掘金文章(Android)">
+                掘金文章(Android) <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/joe.jpg"
+                alt="Joe Wang" />
+            
+              <p class="site-author-name" itemprop="name">Joe Wang</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#2018-01-27"><span class="nav-number">1.</span> <span class="nav-text">2018-01-27</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Joe Wang</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
