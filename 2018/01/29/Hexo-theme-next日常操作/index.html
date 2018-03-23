@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="图片不知道放哪？&amp;emsp;&amp;emsp;主题自带一个文件目录( 项目名/public/images )，但为了导致手欠造成破坏，所以在public目录下新建pic文件夹，然后在&amp;lt;image/&amp;gt;使用src=&amp;quot;/pic/xxxx.jpg&amp;quot;（由文章的URL可以知道pulic这货才是站点根目录）。 自定义样式？&amp;emsp;&amp;emsp;主题内容的样式太单一？想使用主题内部样式">
+<meta name="description" content="图片不知道放哪？&amp;emsp;&amp;emsp;主题自带一个文件目录( 项目名/public/images )，但为了导致手欠造成破坏，所以在public目录下新建pic文件夹，然后在&amp;lt;image/&amp;gt;使用src=&amp;quot;/pic/xxxx.jpg&amp;quot;（由文章的URL可以知道pulic这货才是站点根目录）。&amp;emsp;&amp;emsp;且慢，此处有坑！！！当运行hexo clean的 时候">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo-theme-next日常操作">
 <meta property="og:url" content="http://yoursite.com/2018/01/29/Hexo-theme-next日常操作/index.html">
 <meta property="og:site_name" content="Joetube">
-<meta property="og:description" content="图片不知道放哪？&amp;emsp;&amp;emsp;主题自带一个文件目录( 项目名/public/images )，但为了导致手欠造成破坏，所以在public目录下新建pic文件夹，然后在&amp;lt;image/&amp;gt;使用src=&amp;quot;/pic/xxxx.jpg&amp;quot;（由文章的URL可以知道pulic这货才是站点根目录）。 自定义样式？&amp;emsp;&amp;emsp;主题内容的样式太单一？想使用主题内部样式">
+<meta property="og:description" content="图片不知道放哪？&amp;emsp;&amp;emsp;主题自带一个文件目录( 项目名/public/images )，但为了导致手欠造成破坏，所以在public目录下新建pic文件夹，然后在&amp;lt;image/&amp;gt;使用src=&amp;quot;/pic/xxxx.jpg&amp;quot;（由文章的URL可以知道pulic这货才是站点根目录）。&amp;emsp;&amp;emsp;且慢，此处有坑！！！当运行hexo clean的 时候">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-29T05:52:37.907Z">
+<meta property="og:updated_time" content="2018-03-23T07:39:08.568Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo-theme-next日常操作">
-<meta name="twitter:description" content="图片不知道放哪？&amp;emsp;&amp;emsp;主题自带一个文件目录( 项目名/public/images )，但为了导致手欠造成破坏，所以在public目录下新建pic文件夹，然后在&amp;lt;image/&amp;gt;使用src=&amp;quot;/pic/xxxx.jpg&amp;quot;（由文章的URL可以知道pulic这货才是站点根目录）。 自定义样式？&amp;emsp;&amp;emsp;主题内容的样式太单一？想使用主题内部样式">
+<meta name="twitter:description" content="图片不知道放哪？&amp;emsp;&amp;emsp;主题自带一个文件目录( 项目名/public/images )，但为了导致手欠造成破坏，所以在public目录下新建pic文件夹，然后在&amp;lt;image/&amp;gt;使用src=&amp;quot;/pic/xxxx.jpg&amp;quot;（由文章的URL可以知道pulic这货才是站点根目录）。&amp;emsp;&amp;emsp;且慢，此处有坑！！！当运行hexo clean的 时候">
 
 
 
@@ -309,7 +309,9 @@
       
 
       
-        <h2 id="图片不知道放哪？"><a href="#图片不知道放哪？" class="headerlink" title="图片不知道放哪？"></a>图片不知道放哪？</h2><p>&emsp;&emsp;主题自带一个文件目录( <code>项目名/public/images</code> )，但为了导致手欠造成破坏，所以在<code>public</code>目录下新建<code>pic</code>文件夹，然后在&lt;image/&gt;使用<code>src=&quot;/pic/xxxx.jpg&quot;</code>（由文章的URL可以知道<code>pulic</code>这货才是站点根目录）。</p>
+        <h2 id="图片不知道放哪？"><a href="#图片不知道放哪？" class="headerlink" title="图片不知道放哪？"></a>图片不知道放哪？</h2><p>&emsp;&emsp;主题自带一个文件目录( <code>项目名/public/images</code> )，但为了导致手欠造成破坏，所以在<code>public</code>目录下新建<code>pic</code>文件夹，然后在&lt;image/&gt;使用<code>src=&quot;/pic/xxxx.jpg&quot;</code>（由文章的URL可以知道<code>pulic</code>这货才是站点根目录）。<br>&emsp;&emsp;且慢，此处有坑！！！当运行<code>hexo clean</code>的 时候会发生什么？</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">D:<span class="title">blog</span>&gt; <span class="title">hexo</span> <span class="title">clean</span></span></span><br><span class="line"><span class="function"><span class="title">INFO</span> <span class="title">Deleted</span> <span class="title">database</span>.</span></span><br><span class="line"><span class="function"><span class="title">INFO</span> <span class="title">Deleted</span> <span class="title">public</span> <span class="title">floder</span>.</span></span><br></pre></td></tr></table></figure>
+<p>So what ？运行这个命令导致public文件被删除。。。GG，所以运行<code>hexo clean</code>时备份很重要。</p>
 <h2 id="自定义样式？"><a href="#自定义样式？" class="headerlink" title="自定义样式？"></a>自定义样式？</h2><p>&emsp;&emsp;主题内容的样式太单一？想使用主题内部样式又没有文档？每次缩进还要 &amp;emsp;？</p>
 <p>&emsp;&emsp;太苦了！强迫症、懒人基因、程序思维、职业修养。。。不能自定义的都是耍流氓。</p>
 <p>&emsp;&emsp;打开主题目录(<code>themems/hexo-theme-next</code>)，进入<code>css</code>目录，再看看<code>main.styl</code>末尾~，我靠！竟然是custom~ custom~ custom~ ，别告诉我你一点想法也没有，再进入<code>@import &quot;_custom/custom&quot;;</code>所指向的文件&gt;&gt;&gt;&gt;空的&lt;&lt;&lt;&lt;，没错这就是留给你自定义样式的。</p>
