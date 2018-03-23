@@ -470,9 +470,12 @@
       
         
           
-            <h2 id="图片不知道放哪？"><a href="#图片不知道放哪？" class="headerlink" title="图片不知道放哪？"></a>图片不知道放哪？</h2><p>&emsp;&emsp;主题自带一个文件目录( <code>项目名/public/images</code> )，但为了导致手欠造成破坏，所以在<code>public</code>目录下新建<code>pic</code>文件夹，然后在&lt;image/&gt;使用<code>src=&quot;/pic/xxxx.jpg&quot;</code>（由文章的URL可以知道<code>pulic</code>这货才是站点根目录）。<br>&emsp;&emsp;且慢，此处有坑！！！当运行<code>hexo clean</code>的 时候会发生什么？</p>
+            <h2 id="图片不知道放哪？"><a href="#图片不知道放哪？" class="headerlink" title="图片不知道放哪？"></a>图片不知道放哪？</h2><p>&emsp;&emsp;对爬坑不感兴趣的，可直接跳过分析直接看总结。</p>
+<p>&emsp;&emsp;主题自带一个文件目录( <code>项目名/public/images</code> )，但为了导致手欠造成破坏，所以在<code>public</code>目录下新建<code>pic</code>文件夹，然后在&lt;image/&gt;使用<code>src=&quot;/pic/xxxx.jpg&quot;</code>（由文章的URL可以知道<code>pulic</code>这货才是站点根目录）。<br>&emsp;&emsp;且慢，此处有坑！！！当运行<code>hexo clean</code>的 时候会发生什么？</p>
 <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">D:<span class="title">blog</span>&gt; <span class="title">hexo</span> <span class="title">clean</span></span></span><br><span class="line"><span class="function"><span class="title">INFO</span> <span class="title">Deleted</span> <span class="title">database</span>.</span></span><br><span class="line"><span class="function"><span class="title">INFO</span> <span class="title">Deleted</span> <span class="title">public</span> <span class="title">floder</span>.</span></span><br></pre></td></tr></table></figure>
-<p>So what ？运行这个命令导致public文件被删除。。。GG，所以运行<code>hexo clean</code>时备份很重要。</p>
+<p>So what ？运行这个命令导致public文件被删除。。。<br>那么问题来了，<code>/public</code>只是临时文件，那上面的做法就是滚犊子。</p>
+<p>&emsp;&emsp;好了，开始正文。从上面的情况来看，我们只是修改了临时文件而已，那临时文件是怎么产生的呢？<br>找到<code>/public</code>里一个识别性较高的文件，全局搜索，啊哈！在<code>/hexo-theme-next</code>里有一个<code>/source</code>，内容和<code>/public</code>里的内容简直一模一样，在<code>/source</code>里添加一个<code>pic</code>目录？ 然后执行<code>hexo clean</code>？ 再执行完<code>hexo clean</code>与<code>hexo g</code>后，<code>/public</code>下果然出现了一个<code>pic</code>目录，再放点其他东西进去？？？ 完全可行</p>
+<p>&emsp;&emsp;总结：在主题目录<code>/hexo-theme-next/source</code>下的内容都会以复制的方式放入临时公共资源<code>public</code>目录下。所以样式，图片自定义操作基本可以靠操作这个文件来实现。</p>
 <h2 id="自定义样式？"><a href="#自定义样式？" class="headerlink" title="自定义样式？"></a>自定义样式？</h2><p>&emsp;&emsp;主题内容的样式太单一？想使用主题内部样式又没有文档？每次缩进还要 &amp;emsp;？</p>
 <p>&emsp;&emsp;太苦了！强迫症、懒人基因、程序思维、职业修养。。。不能自定义的都是耍流氓。</p>
 <p>&emsp;&emsp;打开主题目录(<code>themems/hexo-theme-next</code>)，进入<code>css</code>目录，再看看<code>main.styl</code>末尾~，我靠！竟然是custom~ custom~ custom~ ，别告诉我你一点想法也没有，再进入<code>@import &quot;_custom/custom&quot;;</code>所指向的文件&gt;&gt;&gt;&gt;空的&lt;&lt;&lt;&lt;，没错这就是留给你自定义样式的。</p>
